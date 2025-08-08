@@ -2,6 +2,9 @@ import streamlit as st
 import pandas as pd
 import plotly_express as px
 
+st.header('Projeto sprint 5 - Análise de ados de anúncios de carros')
+st.write('Selecione os gráficos abaixo para visualizar diferentes aspectos dos dados de veículos.')
+
 car_data = pd.read_csv('vehicles.csv')
 
 bulid_hist_1 = st.checkbox('Criar histograma da distribuição da quilometragem')
