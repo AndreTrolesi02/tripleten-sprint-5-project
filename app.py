@@ -17,8 +17,9 @@ if bulid_hist_1:
     st.write('Criando um histograma para o conjunto de dados de anúncios de vendas de carros')
     fig = px.histogram(car_data, x = 'odometer', title = 'Distribuição de quilometragem', 
                        labels = {'odometer': 'Quilometragem (milhas)',
-                                 'count': 'Contagem de veículos'}
+                                 }
                                  )
+    fig.update_layout(yaxis_title = 'Contagem de veículos')
     st.plotly_chart(fig, use_container_width = True)
 
 if build_scatter:
@@ -53,6 +54,7 @@ if build_hist_2:
     fig = px.histogram(car_data, x = 'model_year', color = 'condition', title = 'Condições do veículo pelo ano do modelo',
                        labels = {'model_year': 'Ano do modelo',
                                  'condition': 'Condição',
-                                 'count': 'Quantidade'}
+                                 }
                        )
+    fig.update_layout(yaxis_title = 'Quantidade')
     st.plotly_chart(fig, use_container_width = True)
