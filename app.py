@@ -7,13 +7,13 @@ st.write('Selecione os gráficos abaixo para visualizar diferentes aspectos dos 
 
 car_data = pd.read_csv('vehicles.csv')
 
-bulid_hist_1 = st.checkbox('Criar histograma da distribuição da quilometragem')
+build_hist_1 = st.checkbox('Criar histograma da distribuição da quilometragem')
 build_scatter = st.checkbox('Criar gráfico de dispersão da relação entre o preço e a quilometragem')
 build_bar_1 = st.checkbox('Criar gráfico de barras do preço médio dos veículos pelo tipo de modelo')
 build_bar_2 = st.checkbox('Criar gráfico de barras da quantidade de veículos pelo tipo de combustível')
 build_hist_2 = st.checkbox('Criar histograma da condição dos veículos pelo ano do modelo')
 
-if bulid_hist_1:
+if build_hist_1:
     st.write('Criando um histograma para o conjunto de dados de anúncios de vendas de carros')
     fig = px.histogram(car_data, x = 'odometer', title = 'Distribuição de quilometragem', 
                        labels = {'odometer': 'Quilometragem (milhas)',
